@@ -1,65 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
-		<title>Countdown</title>
-	</head>
-	<body>
-		<div class="container my-5">
-			<h1 class="mb-5">2023 A/L Exam in,</h1>
-			<div class="row text-center mb-5">
-				<div class="col-3">
-					<div class="bg-primary text-white rounded py-3">
-						<h1 id="days">0</h1>
-						<span>days</span>
-					</div>
-				</div>
-				<div class="col-3">
-					<div class="bg-primary text-white rounded py-3">
-						<h1 id="hours">0</h1>
-						<span>hours</span>
-					</div>
-				</div>
-				<div class="col-3">
-					<div class="bg-primary text-white rounded py-3">
-						<h1 id="minutes">0</h1>
-						<span>minutes</span>
-					</div>
-				</div>
-				<div class="col-3">
-					<div class="bg-primary text-white rounded py-3">
-						<h1 id="seconds">0</h1>
-						<span>seconds</span>
-					</div>
-				</div>
-			</div>
-			<p>Developed by <a href="https://t.me/uhaahm">UHA_Dev</a></p>
-		</div>
-		<script src="js/script.js"></script>
-		<script>
-		    
-		    target = '27/11/2023'; // Countdown To (DD/MM/YYYY)
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Message</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-days = document.getElementById('days');
-hours = document.getElementById('hours');
-minutes = document.getElementById('minutes');
-seconds = document.getElementById('seconds');
+        .message-container {
+            background-color: #e1e1e1;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 80%;
+        }
 
-setInterval(function() {
-	now = new Date().getTime();
-	targetSplit = target.split('/');
-	targetParsed = new Date(targetSplit[2], targetSplit[1] - 1, targetSplit[0]);
-	difference = targetParsed - now;
-	if (difference > 0) {
-		days.innerHTML = Math.floor(difference / (1000 * 60 * 60 * 24));
-		hours.innerHTML = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-		minutes.innerHTML = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-		seconds.innerHTML = Math.floor((difference % (1000 * 60)) / 1000);
-	}
-}, 1000);
-		    
-		</script>
-	</body>
+        .message {
+            font-size: 24px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="message-container">
+        <p class="message">පකද බලන්නෙ එක්සෑම් කල් ගියා වුත්තො😒</p>
+    </div>
+</body>
 </html>
